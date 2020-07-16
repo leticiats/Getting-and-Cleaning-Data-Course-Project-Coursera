@@ -1,0 +1,247 @@
+# Code book of Coursera Getting and Cleaning Data course project
+
+The features presented in this database, which is located in the `tidy_data.txt` file of this repository, was selected from the database obtained from the accelerometer and gyroscope 3-axial raw signals.
+
+These time domain signals (variables containing `time`) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (variables containing `Jerk`). Also the magnitude of these three-dimensional signals were calculated using the **Euclidean norm** (variables containing `Mag`). 
+
+Finally a Fast **Fourier Transform (FFT)** was applied to some of these signals producing the frequency domain signals (variables containing `frequency`).
+
+All the features were normalized and bounded within [-1,1].
+
+## Features
+
+### Identifiers
+
+`subject` - Test subject identifier.
+
+`activity` - The type of activity performed when the corresponding measurements were taken, string with 6 possible values:
+
+- `WALKING` (value 1): subject was walking during the test.
+- `WALKING_UPSTAIRS` (value 2): subject was walking up a staircase during the test.
+- `WALKING_DOWNSTAIRS` (value 3): subject was walking down a staircase during the test.
+- `SITTING` (value 4): subject was sitting during the test.
+- `STANDING` (value 5): subject was standing during the test.
+- `LAYING` (value 6): subject was laying down during the test.
+
+### Averege Measurements
+
+#### **Time Domain** 
+
+
+##### Average time-domain body acceleration:
+
+`timeBodyAccmeanX` - in the X direction.
+
+`timeBodyAccmeanY` - in the Y direction.
+
+`timeBodyAccmeanZ` - in the Z direction. 
+
+##### Average time-domain gravity acceleration:
+
+`timeGravityAccmeanX` - in the X direction.
+
+`timeGravityAccmeanY` - in the Y direction. 
+
+`timeGravityAccmeanZ` - in the Z direction. 
+
+##### Average time-domain body acceleration jerk:
+
+`timeBodyAccJerkmeanX` - in the X direction. 
+
+`timeBodyAccJerkmeanY` - in the Y direction. 
+
+`timeBodyAccJerkmeanZ` - in the Z direction. 
+
+##### Average time-domain body angular velocity:
+
+`timeBodyGyromeanX` - in the X direction.
+
+`timeBodyGyromeanY` - in the Y direction.
+
+`timeBodyGyromeanZ` - in the Z direction. 
+
+##### Average time-domain body angular velocity jerk:
+
+`timeBodyGyroJerkmeanX` - in the X direction.
+
+`timeBodyGyroJerkmeanY` - in the Y direction. 
+
+`timeBodyGyroJerkmeanZ` - in the Z direction. 
+
+##### Average of the time-domain magnitude:
+
+`timeBodyAccMagmean` - of body acceleration.
+
+`timeGravityAccMagmean` - gravity acceleration.
+
+`timeBodyAccJerkMagmean` - of body acceleration jerk.
+
+`timeBodyGyroMagmean` - of body angular velocity.
+
+`timeBodyGyroJerkMagmean` - of body angular velocity jerk.
+
+
+#### **Frequency Domain**
+
+
+##### Average frequency-domain body acceleration
+
+`frequencyDomainBodyAccmeanX` - in the X direction.
+
+`frequencyDomainBodyAccmeanY` - in the Y direction.
+
+`frequencyDomainBodyAccmeanZ` - in the Z direction.
+
+##### Weighted average of the frequency components of the frequency-domain body acceleration:
+
+`frequencyDomainBodyAccmeanFreqX` - in the X direction. 
+
+`frequencyDomainBodyAccmeanFreqY` - in the Y direction. 
+
+`frequencyDomainBodyAccmeanFreqZ` - in the Z direction.
+
+##### Average frequency-domain body acceleration jerk (derivation of the acceleration in time)
+
+`frequencyDomainBodyAccJerkmeanX` - in the X direction.
+
+`frequencyDomainBodyAccJerkmeanY` - in the Y direction. 
+
+`frequencyDomainBodyAccJerkmeanZ` - in the Z direction. 
+
+##### Weighted average of the frequency components of the frequency-domain body acceleration jer
+
+`frequencyDomainBodyAccJerkmeanFreqX` - in the X direction. 
+
+`frequencyDomainBodyAccJerkmeanFreqY` - in the Y direction. 
+
+`frequencyDomainBodyAccJerkmeanFreqZ` - in the Z direction. 
+ 
+##### Average frequency-domain body angular velocity:
+
+`frequencyDomainBodyGyromeanX` - in the X direction.
+
+`frequencyDomainBodyGyromeanY` - in the Y direction.
+
+`frequencyDomainBodyGyromeanZ` - in the Z direction. 
+
+##### Weighted average of the frequency components of the frequency-domain body angular velocity:
+
+`frequencyDomainBodyGyromeanFreqX` - in the X direction. 
+
+`frequencyDomainBodyGyromeanFreqY` - in the Y direction. 
+
+`frequencyDomainBodyGyromeanFreqZ` - in the Z direction. 
+
+##### Average of the frequency-domain magnitude:
+
+`frequencyDomainBodyAccMagmean` - of body acceleration.
+
+`frequencyDomainBodyAccJerkMagmean` - of body acceleration jerk.
+
+`frequencyDomainBodyGyroMagmean` -  of body angular velocity.
+
+`frequencyDomainBodyGyroJerkMagmean` - of body angular velocity jerk. 
+
+##### Weighted average of the frequency components of the frequency-domain magnitude:
+
+`frequencyDomainBodyAccMagmeanFreq` - of body acceleration.
+
+`frequencyDomainBodyAccJerkMagmeanFreq` - of body acceleration jerk.
+
+`frequencyDomainBodyGyroMagmeanFreq` -  of body angular velocity.
+
+`frequencyDomainBodyGyroJerkMagmeanFreq` - of body angular velocity jerk.
+
+### Standart Measurements
+
+#### **Time Domain**
+
+##### Standard deviation of the time-domain body acceleration:
+
+`timeBodyAccstdX` - in the X direction. 
+
+`timeBodyAccstdY` - in the Y direction. 
+
+`timeBodyAccstdZ` - in the Z direction. 
+
+##### Standard deviation of the time-domain gravity acceleration:
+
+`timeGravityAccstdX` - in the X direction. 
+
+`timeGravityAccstdY` - in the Y direction. 
+
+`timeGravityAccstdZ` - in the Z direction. 
+
+##### Standard deviation of the time-domain body acceleration jerk:
+
+`timeBodyAccJerkstdX` - in the X direction. 
+
+`timeBodyAccJerkstdY` - in the Y direction. 
+
+`timeBodyAccJerkstdZ` - in the Z direction. 
+
+##### Standard deviation of the time-domain body angular velocity:
+
+`timeBodyGyrostdX` - in the X direction. 
+
+`timeBodyGyrostdY` - in the Y direction. 
+
+`timeBodyGyrostdZ` - in the Z direction. 
+
+##### Standard deviation of the time-domain body angular velocity jerk:
+
+`timeBodyGyroJerkstdX` - in the X direction. 
+
+`timeBodyGyroJerkstdY` - in the Y direction. 
+
+`timeBodyGyroJerkstdZ` - in the Z direction. 
+
+##### Standard deviation of the frequency-domain magnitude:
+
+`timeBodyAccMagstd` - of body acceleration. 
+
+`timeGravityAccMagstd` - of gravity acceleration.
+
+`timeBodyAccJerkMagstd` - of body acceleration jerk.
+
+`timeBodyGyroMagstd` - of body angular velocity.
+
+`timeBodyGyroJerkMagstd`- of body angular velocity jerk.
+
+#### **Frequency Domain**
+
+##### Standard deviation of the frequency-domain body acceleration:
+
+`frequencyDomainBodyAccstdX` - in the X direction. 
+
+`frequencyDomainBodyAccstdY` - in the Y direction. 
+
+`frequencyDomainBodyAccstdZ` - in the Z direction. 
+
+##### Standard deviation of the frequency-domain body acceleration jerk:
+
+`frequencyDomainBodyAccJerkstdX` - in the X direction. 
+
+`frequencyDomainBodyAccJerkstdY` - in the Y direction. 
+
+`frequencyDomainBodyAccJerkstdZ` - in the Z direction. 
+
+##### Standard deviation of the frequency-domain body angular velocity:
+
+`frequencyDomainBodyGyrostdX` - in the X direction. 
+
+`frequencyDomainBodyGyrostdY` - in the Y direction. 
+
+`frequencyDomainBodyGyrostdZ` - in the Z direction.
+
+##### Standard deviation of the frequency-domain magnitude:
+
+`frequencyDomainBodyAccMagstd`- of body acceleration.
+
+`frequencyDomainBodyAccJerkMagstd` - of body acceleration jerk.
+
+`frequencyDomainBodyGyroMagstd` - of body angular velocity.
+
+`frequencyDomainBodyGyroJerkMagstd` - of body angular velocity jerk.
